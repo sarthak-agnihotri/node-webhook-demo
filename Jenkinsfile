@@ -14,7 +14,7 @@ pipeline{
         }
         stage('Build Docker Image'){
             steps{
-                bat 'docker build -t node-webhook-demo:latest .'
+                bat 'docker build -t sarthak0144/node-webhook-demo:latest .'
             }
         }
         stage('Push Docker Image'){
@@ -27,7 +27,7 @@ pipeline{
                     )
                 ]){
                     bat 'docker login -u %DOCKER_USER% -p %DOCKER_PASS%'
-                    bat 'docker push node-webhook-demo:latest'
+                    bat 'docker push sarthak0144/node-webhook-demo:latest'
                 }
             }
         }

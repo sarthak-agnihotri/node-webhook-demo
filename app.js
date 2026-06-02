@@ -4,8 +4,8 @@ const app = express();
 
 app.get('/', (req, res) => {
 
-    // res.send('Hello from Jenkins + Node.js + Docker');
-    res.send('Version 2');
+    res.send('Hello from Jenkins + Node.js + Docker');
+    // res.send('Version 2');
 
 });
 
